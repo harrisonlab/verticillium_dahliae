@@ -29,12 +29,28 @@ and annotation.
 ```bash
     mkdir -p /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
   	cd /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
-  	Species=V.dahliae
-  	Strain=51
+  	Species="V.dahliae"
+  	Strain="51"
   	mkdir -p raw_dna/paired/$Species/$Strain/F
   	mkdir -p raw_dna/paired/$Species/$Strain/R    
     cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/F/wilt_51_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
     cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/R/wilt_51_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+    Strain="53"
+  	mkdir -p raw_dna/paired/$Species/$Strain/F
+  	mkdir -p raw_dna/paired/$Species/$Strain/R    
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/53/F/wilt_53_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/53/R/wilt_53_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+    Strain="58"
+  	mkdir -p raw_dna/paired/$Species/$Strain/F
+  	mkdir -p raw_dna/paired/$Species/$Strain/R    
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/58/F/wilt_58_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/58/R/wilt_58_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+    Strain="61"
+  	mkdir -p raw_dna/paired/$Species/$Strain/F
+  	mkdir -p raw_dna/paired/$Species/$Strain/R    
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/61/F/wilt_61_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/61/R/wilt_61_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+
 ```
 
 
