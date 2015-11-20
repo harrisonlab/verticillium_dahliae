@@ -27,15 +27,14 @@ Data was copied from the raw_data repository to a local directory for assembly
 and annotation.
 
 ```bash
-    mkdir -p /home/groups/harrisonlab/project_files/fusarium_ex_strawberry
-  	cd /home/groups/harrisonlab/project_files/fusarium_ex_strawberry
-  	Species=F.oxysporum_fsp_fragariae
-  	Strain=FeChina
-    mkdir -p raw_dna/paired/fusarium_ex_strawberry/FeChina/F
-    mkdir -p raw_dna/paired/fusarium_ex_strawberry/FeChina/R
-    RawDat=/home/groups/harrisonlab/raw_data/raw_seq/raw_reads/150925_M01678_0029_AC669
-    cp $RawDat/FeChina_S1_L001_R1_001.fastq.gz raw_dna/paired/fusarium_ex_strawberry/FeChina/F/.
-    cp $RawDat/FeChina_S1_L001_R2_001.fastq.gz raw_dna/paired/fusarium_ex_strawberry/FeChina/R/.
+    mkdir -p /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
+  	cd /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
+  	Species=V.dahliae
+  	Strain=51
+  	mkdir -p raw_dna/paired/$Species/$Strain/F
+  	mkdir -p raw_dna/paired/$Species/$Strain/R    
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/F/wilt_51_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/R/wilt_51_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
 ```
 
 
