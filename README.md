@@ -63,7 +63,7 @@ Data quality was visualised using fastqc:
 ```bash
 for RawData in $(ls raw_dna/paired/V.dahliae/*/*/*.fastq); do
 	echo $RawData; 
-	ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc
+	ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
 	qsub $ProgDir/run_fastqc.sh $RawData;
 done
 
@@ -74,13 +74,28 @@ This was done with fastq-mcf
 
 
 ```bash
-	
+	for Strain in "51" "53" "58" "61"; do
+	echo $Strain
+	Read_F=$(ls raw_dna/paired/V.dahliae/$Strain/F/*.fastq)
+	Read_R=$(ls raw_dna/paired/V.dahliae/$Strain/R/*.fastq)
+	IluminaAdapters=/home/fanron/git_repos/tools/seq_tools/illumina_full_adapters.fa
+	ProgDir=/home/fanron/git_repos/tools/seq_tools//rna_qc
+	qsub $ProgDir/rna_qc_fastq-mcf.sh $Read_F $Read_R $IluminaAdapters DNA
+done
+
+
+
 ```
 
 
 Data quality was visualised once again following trimming:
 
 ```bash
+for RawData in $(ls qc_dna/paired/V.dahliae/*/*/*.fq.gz); do
+  	echo $RawData;
+  	ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
+  	qsub $ProgDir/run_fastqc.sh $RawData;
+  done
 	
 ```
 
@@ -89,6 +104,13 @@ kmer counting was performed using kmc.
 This allowed estimation of sequencing depth and total genome size:
 
 ```bash
+for Strain in "51" "53" "58" "61"; do
+        echo $Strain;
+        Trim_F=$(ls qc_dna/paired/V.dahliae/$Strain/F/*.fq.gz);
+        Trim_R=$(ls qc_dna/paired/V.dahliae/$Strain/R/*.fq.gz);
+        ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
+        qsub $ProgDir/kmc_kmer_counting.sh $Trim_F $Trim_R;
+    done
   
 ```
 
