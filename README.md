@@ -1,12 +1,8 @@
 # verticillium_dahliae
 Commands used for the analysis of V. dahliae genomes
-# fusarium_ex_strawberry
-Commands used in the analysis of Fusarium oxysporum isolates ex. strawberry.
 
-Fusarium oxysporum fsp. fragariae
-====================
 
-Commands used during analysis of the Fusarium oxysporum fsp. fragariae genome. Note - all this work was performed in the directory: /home/groups/harrisonlab/project_files/Fusarium oxysporum fsp. fragariae
+Commands used during analysis of Verticillium dahliae genomes. Note - all this work was performed in the directory: /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
 
 The following is a summary of the work presented in this Readme:
 Data organisation:
@@ -27,30 +23,38 @@ Data was copied from the raw_data repository to a local directory for assembly
 and annotation.
 
 ```bash
-    mkdir -p /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
-  	cd /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
-  	Species="V.dahliae"
-  	Strain="51"
-  	mkdir -p raw_dna/paired/$Species/$Strain/F
-  	mkdir -p raw_dna/paired/$Species/$Strain/R    
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/F/wilt_51_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/R/wilt_51_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
-    Strain="53"
-  	mkdir -p raw_dna/paired/$Species/$Strain/F
-  	mkdir -p raw_dna/paired/$Species/$Strain/R    
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/53/F/wilt_53_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/53/R/wilt_53_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
-    Strain="58"
-  	mkdir -p raw_dna/paired/$Species/$Strain/F
-  	mkdir -p raw_dna/paired/$Species/$Strain/R    
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/58/F/wilt_58_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/58/R/wilt_58_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
-    Strain="61"
-  	mkdir -p raw_dna/paired/$Species/$Strain/F
-  	mkdir -p raw_dna/paired/$Species/$Strain/R    
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/61/F/wilt_61_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
-    cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/61/R/wilt_61_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
-
+  # For original sequencing runs
+  mkdir -p /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
+	cd /home/groups/harrisonlab/project_files/verticillium_dahliae/pathogenomics
+	Species="V.dahliae"
+	Strain="51"
+	mkdir -p raw_dna/paired/$Species/$Strain/F
+	mkdir -p raw_dna/paired/$Species/$Strain/R    
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/F/wilt_51_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/51/R/wilt_51_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+  Strain="53"
+	mkdir -p raw_dna/paired/$Species/$Strain/F
+	mkdir -p raw_dna/paired/$Species/$Strain/R    
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/53/F/wilt_53_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/53/R/wilt_53_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+  Strain="58"
+	mkdir -p raw_dna/paired/$Species/$Strain/F
+	mkdir -p raw_dna/paired/$Species/$Strain/R    
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/58/F/wilt_58_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/58/R/wilt_58_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+  Strain="61"
+	mkdir -p raw_dna/paired/$Species/$Strain/F
+	mkdir -p raw_dna/paired/$Species/$Strain/R    
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/61/F/wilt_61_F_appended.fastq raw_dna/paired/$Species/$Strain/F/.
+  cp /home/groups/harrisonlab/project_files/verticillium_dahliae/wilt/raw_dna/paired/V.dahliae/61/R/wilt_61_R_appended.fastq raw_dna/paired/$Species/$Strain/R/.
+  # For new sequencing run
+  RawDat=/home/groups/harrisonlab/raw_data/raw_seq/raw_reads/160412_M04465_0010-AMLCU    
+  Species="V.dahliae"
+  Strain="12008"
+  mkdir -p raw_dna/paired/$Species/$Strain/F
+  mkdir -p raw_dna/paired/$Species/$Strain/R
+  cp $RawDat/Vd12008_S1_L001_R1_001.fastq.gz raw_dna/paired/$Species/$Strain/F/.
+  cp $RawDat/Vd12008_S1_L001_R2_001.fastq.gz raw_dna/paired/$Species/$Strain/R/.
 ```
 
 
@@ -61,11 +65,11 @@ programs: fastqc fastq-mcf kmc
 Data quality was visualised using fastqc:
 
 ```bash
-for RawData in $(ls raw_dna/paired/V.dahliae/*/*/*.fastq); do
-	echo $RawData; 
-	ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
-	qsub $ProgDir/run_fastqc.sh $RawData;
-done
+  for RawData in $(ls raw_dna/paired/V.dahliae/*/*/*.fastq* | grep '12008'); do
+  	echo $RawData;
+  	ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
+  	qsub $ProgDir/run_fastqc.sh $RawData;
+  done
 
 ```
 
@@ -96,7 +100,7 @@ for RawData in $(ls qc_dna/paired/V.dahliae/*/*/*.fq.gz); do
   	ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
   	qsub $ProgDir/run_fastqc.sh $RawData;
   done
-	
+
 ```
 
 
@@ -111,10 +115,10 @@ for Strain in "51" "53" "58" "61"; do
         ProgDir=/home/fanron/git_repos/tools/seq_tools/dna_qc;
         qsub $ProgDir/kmc_kmer_counting.sh $Trim_F $Trim_R;
     done
-  
+
 ```
 
-** Estimated Genome Size is: 8156187 
+** Estimated Genome Size is: 8156187
 
 ** Esimated Coverage is: 35
 
@@ -126,23 +130,23 @@ A range of hash lengths were used and the best assembly selected for subsequent 
 
 ```bash
 
-  
+
 ```
 
 ## Spades Assembly
 
 ```bash
-  
+
 ```
 ## Filter the contigs
 
 ```bash
-    
+
 ```
 ##Quast
 
 ```bash
-  
+
 ```
 
 -->
@@ -152,7 +156,7 @@ Repeat masking was performed and used the following programs: Repeatmasker Repea
 The best assembly was used to perform repeatmasking
 
 ```bash
-   
+
  ```
 
 ** % bases masked by repeatmasker: 11.73%
@@ -169,7 +173,7 @@ Gene models were used to predict genes in the fusarium genome. This used results
 Quality of genome assemblies was assessed by looking for the gene space in the assemblies.
 
 ```bash
-  	
+
 ```
 
 ** Number of cegma genes present and complete: 95.16
@@ -181,7 +185,7 @@ Gene prediction was performed for the neonectria genome.
 CEGMA genes were used as Hints for the location of CDS.
 
 ```bash
-	
+
 ```
 
 ** Number of genes predicted: 12712
@@ -193,16 +197,16 @@ A)Interproscan
 Interproscan was used to give gene models functional annotations.
 
 ```bash
-	
+
 ```
 
 ```bash
-	
+
 ```
 B) SwissProt
 
 ```bash
-  
+
 ```
 
 #Genomic analysis
@@ -213,19 +217,19 @@ The first analysis was based upon BLAST searches for genes known to be involved 
 Predicted gene models were searched against the PHIbase database using tBLASTx.
 
 ```bash
-	
+
 ```
 
 Top BLAST hits were used to annotate gene models.
 
-The second analysis was based upon BLAST searches for genes known to be SIX genes 
+The second analysis was based upon BLAST searches for genes known to be SIX genes
 
 
 ##Genes with homology to SIX genes
 Predicted gene models were searched against the SIX genes database using tBLASTx.
 
 ```bash
-  
+
 ```
 
 ##Mimps
